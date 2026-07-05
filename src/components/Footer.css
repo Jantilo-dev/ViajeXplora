@@ -1,0 +1,8 @@
+/* Footer.css — Estilos específicos del pie de página
+ *
+ * footer hr — Reduce la opacidad de la línea separadora para que
+ *             se integre mejor con el fondo oscuro (bg-dark)
+ */
+footer hr {
+  opacity: 0.2;   /* Hace la línea más sutil */
+}

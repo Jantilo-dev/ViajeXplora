@@ -1,0 +1,8 @@
+/* Team.css — Estilos específicos de la sección del equipo
+ *
+ * .team-card svg — No se usa directamente. El SVG se centra mediante
+ *                  Bootstrap (text-center en la card) que aplica text-align: center
+ *                  al contenedor, y el SVG al ser inline-block se centra solo.
+ *                  Este archivo está preparado para estilos futuros.
+ */
+/* (sin estilos adicionales necesarios por ahora) */

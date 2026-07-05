@@ -1,0 +1,21 @@
+/* Treatments.css — Estilos específicos de la sección de tratamientos
+ *
+ * #tratamientos .card-img-top — Altura fija para las imágenes de las tarjetas
+ *                               y object-fit: cover para que se recorten sin deformarse
+ * #tratamientos .card         — Transición suave para hover (transform y sombra)
+ * #tratamientos .card:hover   — Efecto de elevación: la tarjeta sube 4px y la sombra se intensifica
+ */
+
+#tratamientos .card-img-top {
+  height: 180px;           /* Altura uniforme para todas las imágenes de tratamientos */
+  object-fit: cover;       /* Recorta la imagen manteniendo la proporción */
+}
+
+#tratamientos .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;  /* Suaviza hover */
+}
+
+#tratamientos .card:hover {
+  transform: translateY(-4px);                        /* Eleva la card 4px */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important; /* Sombra más notoria */
+}

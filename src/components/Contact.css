@@ -1,0 +1,12 @@
+/* Contact.css — Estilos específicos del formulario de contacto
+ *
+ * #contacto form — Contenedor del formulario con fondo blanco,
+ *                  padding amplio, bordes redondeados y sombra suave
+ *                  para destacarlo visualmente dentro de la sección bg-light
+ */
+#contacto form {
+  background: #fff;                              /* Fondo blanco sólido */
+  padding: 2rem;                                 /* Espaciado interior amplio */
+  border-radius: 8px;                            /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);    /* Sombra ligera y difusa */
+}

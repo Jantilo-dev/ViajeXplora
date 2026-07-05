@@ -1,0 +1,18 @@
+/* App.css — Estilos compartidos entre todos los componentes
+ *
+ * section[id]    — Compensa la altura de la navbar sticky (56px) para
+ *                  que el scroll a secciones no quede oculto detrás de ella
+ * .card          — Transición suave en hover para todas las cards del sitio
+ * .card:hover    — Elevación sutil (translateY) al pasar el mouse
+ */
+section[id] {
+  scroll-margin-top: 70px;  /* 56px navbar + margen extra */
+}
+
+.card {
+  transition: transform 0.2s ease;  /* Suaviza la animación hover */
+}
+
+.card:hover {
+  transform: translateY(-3px);  /* La card se eleva 3px al pasar el mouse */
+}

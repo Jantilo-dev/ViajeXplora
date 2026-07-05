@@ -1,0 +1,8 @@
+/* Navbar.css — Estilos específicos para la barra de navegación
+ *
+ * .navbar-brand svg — Ajusta la alineación vertical del SVG del logo
+ *                     respecto al texto "DentaSmile" (-4px lo baja ligeramente)
+ */
+.navbar-brand svg {
+  vertical-align: -4px;
+}

@@ -1,0 +1,10 @@
+/* AppointmentModal.css — Estilos específicos del modal de agendar cita
+ *
+ * .modal .react-datepicker-wrapper — El DatePicker de react-datepicker
+ *     se renderiza dentro de un wrapper <span> que por defecto es inline.
+ *     Forzamos display: block para que ocupe todo el ancho del contenedor
+ *     y se comporte como un input de bloque normal de Bootstrap.
+ */
+.modal .react-datepicker-wrapper {
+  display: block;
+}

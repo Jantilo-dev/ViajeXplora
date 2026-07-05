@@ -1,0 +1,38 @@
+/* Hero.css — Estilos de la sección Hero
+ *
+ * #hero          — overflow: hidden evita que la imagen se desborde
+ * .hero-img img  — La imagen de portada:
+ *                    - max-height: 450px (altura máxima en desktop)
+ *                    - object-fit: cover (recorta para llenar el contenedor)
+ *                    - border-radius: 12px 0 0 12px (bordes redondeados solo del lado izquierdo)
+ *
+ * Responsive:
+ *   max-width: 991px — La imagen pierde bordes redondeados y reduce su altura máxima
+ *   max-width: 576px — El texto se centra (útil en móviles pequeños)
+ */
+
+#hero {
+  overflow: hidden;
+}
+
+.hero-img img {
+  max-height: 450px;          /* Altura máxima de la imagen en desktop */
+  width: 100%;                /* Ocupa todo el ancho de su columna */
+  object-fit: cover;          /* Recorta la imagen para cubrir el área sin deformarse */
+  border-radius: 12px 0 0 12px; /* Solo bordes redondeados superiores e inferiores izquierdos */
+}
+
+/* Tablets y pantallas medianas: bordes rectos y altura reducida */
+@media (max-width: 991px) {
+  .hero-img img {
+    border-radius: 0;         /* Sin bordes redondeados */
+    max-height: 300px;        /* Altura máxima más pequeña */
+  }
+}
+
+/* Móviles: centrar texto */
+@media (max-width: 576px) {
+  #hero {
+    text-align: center;
+  }
+}

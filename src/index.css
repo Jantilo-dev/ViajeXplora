@@ -1,0 +1,25 @@
+/* index.css — Estilos globales del proyecto
+ *
+ * :root   — Define variables CSS reutilizables (color primario)
+ * html    — Activa scroll suave para la navegación por anclas
+ * #root   — Contenedor raíz: ocupa mínimo el alto total de la ventana
+ *           y usa flexbox para que el footer quede siempre al fondo
+ * main    — Ocupa el espacio restante entre Navbar y Footer
+ */
+:root {
+  --primary: #0d6efd;   /* Color azul primario de Bootstrap */
+}
+
+html {
+  scroll-behavior: smooth;  /* Desplazamiento suave al hacer clic en enlaces internos */
+}
+
+#root {
+  min-height: 100vh;       /* Mínimo alto igual a la ventana del navegador */
+  display: flex;
+  flex-direction: column;  /* Coloca los hijos (navbar, main, footer) en vertical */
+}
+
+main {
+  flex: 1;                 /* Hace que <main> se expanda para llenar el espacio disponible */
+}
