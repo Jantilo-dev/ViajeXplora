@@ -167,13 +167,3 @@ Todos los datos son estaticos (inline en cada componente):
 No hay backend, API externa ni base de datos.
 
 ---
-
-## Capturas
-
-Agregar capturas de pantalla aqui.
-
----
-
-## Documentacion
-
-Para una explicacion detallada del codigo, revisar `DOCUMENTACION.txt`.
