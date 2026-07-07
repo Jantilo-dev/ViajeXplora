@@ -1,27 +1,32 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Treatments from './components/Treatments'
-import Team from './components/Team'
-import Contact from './components/Contact'
+import Carousel from './components/Carousel'
+import Destinations from './components/Destinations'
+import DestinationModal from './components/DestinationModal'
+import CTA from './components/CTA'
 import Footer from './components/Footer'
-import AppointmentModal from './components/AppointmentModal'
 import './App.css'
 
 export default function App() {
-  const [showModal, setShowModal] = useState(false) // controla visibilidad del modal
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedDestino, setSelectedDestino] = useState(null)
 
   return (
     <>
-      <Navbar onOpenModal={() => setShowModal(true)} />
+      <Navbar searchTerm={searchTerm} onSearch={setSearchTerm} />
       <main>
-        <Hero onOpenModal={() => setShowModal(true)} />
-        <Treatments onOpenModal={() => setShowModal(true)} />
-        <Team />
-        <Contact />
+        <Carousel />
+        <Destinations
+          searchTerm={searchTerm}
+          onSelectDestino={setSelectedDestino}
+        />
+        <CTA />
       </main>
       <Footer />
-      <AppointmentModal show={showModal} onClose={() => setShowModal(false)} />
+      <DestinationModal
+        destino={selectedDestino}
+        onClose={() => setSelectedDestino(null)}
+      />
     </>
   )
 }

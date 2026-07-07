@@ -1,13 +1,17 @@
-#tratamientos .card-img-top {
+#destinos .card-img-top {
   height: 180px;
   object-fit: cover;
 }
 
-#tratamientos .card {
+#destinos .card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#tratamientos .card:hover {
+#destinos .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
