@@ -26,10 +26,13 @@ export default function DestinationModal({ destino, onClose }) {
                 </div>
               )}
 
-              <div className="d-flex justify-content-between align-items-center mb-3">
+              <div className="d-flex justify-content-between align-items-center mb-2">
                 <span className="badge bg-primary fs-6">{destino.duracion}</span>
                 <span className="badge bg-warning text-dark fs-6">{destino.rating} estrellas</span>
               </div>
+              <p className="text-secondary small mb-3">
+                Ida: <strong>{destino.fechaIda}</strong> · Vuelta: <strong>{destino.fechaVuelta}</strong>
+              </p>
 
               <h6 className="fw-bold">Descripcion</h6>
               <p className="text-secondary">{destino.descripcion}</p>
@@ -44,7 +47,7 @@ export default function DestinationModal({ destino, onClose }) {
               <div className="d-flex justify-content-between align-items-center my-3 p-3 bg-light rounded">
                 <span className="fs-4 fw-bold text-primary">${destino.precio.toLocaleString('es-CL')}</span>
                 <button className="btn btn-primary btn-lg" onClick={() => {
-                  const compra = { id: Date.now(), destino: destino.nombre, precio: destino.precio, fecha: new Date().toLocaleDateString('es-CL') }
+                  const compra = { id: Date.now(), destino: destino.nombre, precio: destino.precio, ida: destino.fechaIda, vuelta: destino.fechaVuelta, fecha: new Date().toLocaleDateString('es-CL') }
                   const previas = JSON.parse(localStorage.getItem('compras') || '[]')
                   localStorage.setItem('compras', JSON.stringify([compra, ...previas]))
                   alert('Compra registrada. Te contactaremos pronto.')
