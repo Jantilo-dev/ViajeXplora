@@ -68,7 +68,6 @@ mi-landing/
 │   ├── App.jsx / App.css
 │   ├── index.css
 │   └── main.jsx
-├── DOCUMENTACION.txt
 ├── index.html
 └── package.json
 ```
